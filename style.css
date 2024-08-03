@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  justify-content: center;
+  height: 100vh;
+}
+.movieContainer {
+  margin: 10px 0;
+  select {
+    margin: 10px 0;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+}
+
+.showcase {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(216, 216, 216);
+  padding: 10px;
+  list-style-type: none;
+  text-align: center;
+  border-radius: 10px;
+  .seat {
+    width: 50px;
+    height: 50px;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .selected {
+    background-color: #1e90ff;
+    color: white;
+  }
+  .occupied {
+    background-color: #333;
+    color: white;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  .screen {
+    width: 80%;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    perspective: 1000px;
+  }
+  .row {
+    width: 80%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    .seat {
+      width: 50px;
+      height: 50px;
+      background-color: #f3f3f3;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      cursor: pointer;
+      transition: 0.2s;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    .seat:nth-of-type(2) {
+      margin-right: 20px;
+    }
+    .seat:nth-last-of-type(2) {
+      margin-left: 20px;
+    }
+    .seat:not(.occupied):hover {
+      background-color: #1e90ff;
+      color: white;
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+
+    .occupied {
+      background-color: #333;
+      color: white;
+    }
+  }
+}
